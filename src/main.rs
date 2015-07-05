@@ -19,7 +19,9 @@ fn main() {
 
         return res.render("views/index.html", &data);
 
-    }).get("/contact", middleware!{ |req, res|
+    });
+
+    server.get("/contact", middleware! { |req, res|
 
         let mut data = HashMap::<&str, &str>::new();
         data.insert("title","Contact");
