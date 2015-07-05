@@ -18,8 +18,8 @@ fn main() {
         data.insert("title","Verge");
 
         return res.render("views/index.html", &data);
-    })
-    .get("/contact", middleware!{ |req, res|
+
+    }).get("/contact", middleware!{ |req, res|
 
         let mut data = HashMap::<&str, &str>::new();
         data.insert("title","Contact");
