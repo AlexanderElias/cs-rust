@@ -25,7 +25,7 @@ fn main() {
         data.insert("title","Contact");
 
         return res.render("views/contact.html", &data);
-    })
+    });
 
 
     //Serve A Static Directory
