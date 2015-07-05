@@ -1,0 +1,48 @@
+@import url(http://fonts.googleapis.com/css?family=Italiana);
+/*
+
+      Dark/Black Color: #33333D
+
+*/
+html, body, div, nav, h1, h2, h3, h4, img, ul, li { padding: 0px; margin: 0px; }
+body { background-color: white; color: #33333D; font-family: 'Italiana', serif; font-size: 100%; }
+a { text-decoration: none; color: black; }
+ul, li { list-style: none; }
+
+h1 {
+      margin: 150px 0px 5% 0px;
+      text-align: center; font-size: 300%;
+}
+
+
+
+#menu {
+      position: fixed;
+      top: 3%;
+      left: 3%;
+      background-color: #FFF;
+}
+#menu a {
+      font-size: 350%;
+}
+#slide {
+      display: none;
+      padding: 20%;
+}
+#slide a {
+      display: block;
+      font-size: 200%;
+}
+#slide a:hover {
+      text-shadow: 3px 3px 3px rgba(60, 60, 60, 0.6);
+}
+
+
+@media screen and (min-width: 1000px){
+      #menu:hover #slide {
+            display:block;
+      }
+      #menu:hover {
+            box-shadow: 7px 7px 7px 0px rgba(128, 128, 128, 0.44);
+      }
+}

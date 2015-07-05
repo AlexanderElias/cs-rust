@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{title}}</title>
+
+	<!-- CSS Link Must Contain "rel" -->
+	<link type="text/css" rel="stylesheet" href="/css/style.css"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+	<span id="top"></span>
+	<h1>{{title}}</h1>
+
+
+	<nav id="menu">
+			<a href="#">&#9776;</a>
+			<div id="slide">
+				<a href="#top">Top</a>
+				<a href="/contact">Contact Us</a>
+			<div>
+	</nav>
+	<script>
+		var menu = document.getElementById("menu");
+		var slide = document.getElementById('slide');
+
+
+
+
+		menu.addEventListener('click', function(){
+
+			slide.style.display = 'block';
+
+		});
+
+		document.body.addEventListener('click', function(){
+			slide.style.display = 'none';
+		});
+
+	</script>
