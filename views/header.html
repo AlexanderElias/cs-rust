@@ -1,21 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>{{title}}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>{{tab-title}}</title>
 
 	<!-- CSS Link Must Contain "rel" -->
-	<link type="text/css" rel="stylesheet" href="/css/style.css"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link type="text/css" rel="stylesheet" href="/css/header.css">
+	<link type="text/css" rel="stylesheet" href="/css/body.css">
+	<!-- CSS Link Must Contain "rel" -->
+
+	<!-- JS -->
+	<script src="/js/autoSizeSections.js"></script>
+	<script src="/js/makeMenu.js"></script>
+	<script src="/js/scrollControl.js"></script>
+	<!-- JS -->
 </head>
+
 <body>
-	<span id="top"></span>
-	<h1>{{title}}</h1>
-
-
 	<nav id="menu">
-			<a href="#">&#9776;</a>
-			<div id="slide">
-				<a href="#top">Top</a>
-				<a href="/contact">Contact Us</a>
-			<div>
+		<div id="openIcon">&#9776;</div>
+		<div id="closeIcon">X</div>
+		<div id="list">
+			<a href="/">Home</a>
+			<a href="/contact">Contact Us</a>
+		</div>
 	</nav>
+
+	<div id="uarrow">&#9650;</div>
+	<div id="darrow">&#9660;</div>
+
+	<section id="top">
+
+		<h1>{{{title}}}</h1>
+		<h2>{{sub-title}}</h2>
+
+		{{{hint}}}
+
+	</section>
