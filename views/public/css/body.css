@@ -1,34 +1,30 @@
 
-section h2:hover {
+/*section h2:hover {
+      color: #333841;
+}*/
+
+#customized, #creative, #performance {
+      width: 100%;
+      display: table;
+}
+#customized h2, #creative h2, #performance h2 {
+      color: #FFFFFC;
+      text-align: center;
+}
+#customized h2:hover, #creative h2:hover, #performance h2:hover  {
       color: #333841;
 }
 
-
-#customized {
-      width: 100%;
-      background-color: #2973A8;
-}
-#customized h2 {
+#customized p, #creative p, #performance p, #bottom p{
       color: #FFFFFC;
-      padding: 20% 0px 5% 0px;
+      line-height: 200%;
+      padding: 15% 15% 0px 15%;
+      font-family: 'Verdana';
 }
-
-
-#creative {
-      width: 100%;
-      background-color: #43C3B1;
-}
-#creative h2 {
-      color: #FFFFFC;
-      padding: 20% 0px 5% 0px;
-}
-
-
-#performance {
-      width: 100%;
-      background-color: #C36159;
-}
-#performance h2 {
-      color: #FFFFFC;
-      padding: 20% 0px 5% 0px;
+@media screen and (max-width: 760px){
+      #customized p, #creative p, #performance p {
+            font-size: 100%;
+            padding: 0px 10% 0px 10%;
+            font-family: 'Verdana';
+      }
 }

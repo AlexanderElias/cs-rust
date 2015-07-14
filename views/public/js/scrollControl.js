@@ -6,17 +6,15 @@ function scrollControl(){
       
 
       function scrollUp(e){
-            var section = document.getElementsByTagName('section')[0];
-            var sectionHeight = section.offsetHeight;
 
             if (!screen.top) {
                   if (e.keyCode === 38){
 
-                        window.scrollBy(0, - sectionHeight +40);
+                        window.scrollBy(0, - window.innerHeight + 40);
                         //need +48 if mozila
                   } else if(e.type === "click") {
 
-                        window.scrollBy(0, - sectionHeight);
+                        window.scrollBy(0, - window.innerHeight);
                   }
             }
       }//scrollUp()
@@ -26,20 +24,18 @@ function scrollControl(){
 
 
       function scrollDown(e){
-            var section = document.getElementsByTagName('section')[0];
-            var sectionHeight = section.offsetHeight;
 
             if (!screen.bottom) {
-                  if (document.getElementById('hint') != null) {
-                        document.getElementById('hint').style.display = 'none';
+                  if (document.getElementById('message') != null) {
+                        document.getElementById('message').style.display = 'none';
                   }
 
                   if (e.keyCode === 40){
-                        window.scrollBy(0, sectionHeight -40);
+                        window.scrollBy(0,  window.innerHeight -40);
                         //need -48 if mozila
 
                   } else if(e.type === "click") {
-                        window.scrollBy(0, sectionHeight);
+                        window.scrollBy(0,  window.innerHeight);
                   }
             }
       }//scrollDown()

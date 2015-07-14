@@ -11,6 +11,7 @@ function makeMenu() {
             menu.style.width = '40%';
             menu.style.height = '100%';
             menu.style.position = 'fixed';
+            menu.style.zIndex = '100';
             menu.backgroundColor = '';
 
             // List
@@ -47,7 +48,7 @@ function makeMenu() {
       function openMenu() {
             menu.style.left = '0px';
             menu.style.backgroundColor = '#FFFFFC';
-            menu.style.boxShadow = '7px 7px 7px 0px rgba(128, 128, 128, 0.44)';
+            menu.style.boxShadow = '7px 7px 7px 0px rgba(51, 56, 65, 0.5)';
             openIcon.style.display = 'none';
             closeIcon.style.display = 'block';
             for (i=0; i < list.children.length; i++){

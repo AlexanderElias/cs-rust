@@ -17,14 +17,13 @@ fn main() {
 
         let mut data = HashMap::<&str, &str>::new();
         data.insert("tab-title","Verge");
-        data.insert("title","<span style=\"margin-left: 28.9px; position: absolute; margin-top: 17px;vertical-align: middle; z-index: -1;\">V</span><span style=\"font-size: 145%; color: #C36159;vertical-align: middle;\">&#9678</span><span style=\"margin-left: -7px; vertical-align: middle;\">erge</span></h1>");
-        data.insert("sub-title", "Web Development & Design");
-        data.insert("hint","<div id=\"hint\">Use Arrow Keys<div>&#x276f;</div></div>");
+        data.insert("title","<span style=\"margin-left: 28.9px; position: absolute; margin-top: 17px;vertical-align: middle;\">V</span><span style=\"font-size: 145%; color: #C36159;vertical-align: middle;\">&#9678</span><span style=\"margin-left: -7px; vertical-align: middle;\">erge</span></h1>");
+        data.insert("sub-title", "Web Development");
+        data.insert("hint", "<div id=\"hint\"><span id=\"message\">Use Arrow Keys</span><div>&#x276f;</div></div>");
 
-        res.set(MediaType::Html);
+        // res.set(MediaType::Html);
 
         return res.render("views/index.html", &data);
-
     });
 
     server.get("/contact", middleware! { |req, res|

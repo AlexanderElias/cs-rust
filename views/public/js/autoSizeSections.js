@@ -3,10 +3,18 @@
 function autoSizeSections(){
 
       // Gets all sections and matches the window height
-      var allSections = document.getElementsByTagName('section');
+      // var allSections = document.getElementsByTagName('section');
 
-      for (i = 0; i < allSections.length; i++) {
-            allSections[i].style.height = window.innerHeight + 'px';
+      var allSections = document.querySelectorAll('section');
+
+      if (window.innerHeight > 500) {
+            for (i = 0; i < allSections.length; i++) {
+                  allSections[i].style.height = window.innerHeight + 'px';
+            }
+      }else{
+            for (i = 0; i < allSections.length; i++) {
+                  allSections[i].style.height = window.innerHeight * 2 + 'px';
+            }
       }
 }
 
