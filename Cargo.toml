@@ -5,3 +5,4 @@ authors = ["Alexander"]
 
 [dependencies]
 nickel = "*"
+hyper ="*"

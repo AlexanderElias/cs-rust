@@ -1,8 +1,5 @@
 
-/*section h2:hover {
-      color: #333841;
-}*/
-
+/* Index */
 #customized, #creative, #performance {
       width: 100%;
       display: table;
@@ -28,3 +25,52 @@
             font-family: 'Verdana';
       }
 }
+/* Index */
+
+
+/* Contact */
+.contactForm{
+      display: block;
+      width: 100%;
+      text-align: center;
+}
+.contactForm input {
+      width: 35%;
+      padding: 1%;
+      margin: 1%;
+      color: #333841;
+      background-color: #FFFFFC;
+      display: inline-block;
+      font-family:'Verdana';
+      font-size: 100%;
+}
+.contactForm textarea {
+      width: 80%;
+      margin: 1%;
+      padding: 1%;
+      color: #333841;
+      background-color: #FFFFFC;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      font-family:'Verdana';
+      font-size: 100%;
+      max-width: 1100px;
+      height: 200px;
+}
+.contactForm button {
+      width: 25%;
+        padding: 2%;
+        border: none;
+        cursor: pointer;
+        box-shadow: rgba(51, 56, 65, 0.498039) 2px 2px 2px 0px;
+        background-color: #2973A8;
+        color: #FFF;
+        font-size: 110%;
+        font-family: 'Verdana';
+}
+.contactForm button:hover {
+      box-shadow: rgba(51, 56, 65, 0.7) 3px 3px 3px 0px;
+}
+
+/* Contact */

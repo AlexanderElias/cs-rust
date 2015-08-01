@@ -112,19 +112,19 @@ h4 {
       animation:tip 1s
  }
  @-ms-keyframes tip {
-       50% { -ms-transform: rotateY(45deg); transform:rotateY(45deg); }
+       50% { -ms-transform: rotateY(90deg); transform:rotateY(90deg); }
        100% { -ms-transform: rotateY(0deg); transform:rotateY(0deg); }
  }
 @-moz-keyframes tip {
-      50% { -moz-transform: rotateY(45deg); transform:rotateY(45deg); }
+      50% { -moz-transform: rotateY(90deg); transform:rotateY(90deg); }
       100% { -moz-transform: rotateY(0deg); transform:rotateY(0deg); }
 }
 @-webkit-keyframes tip {
-      50% { -webkit-transform: rotateY(45deg); transform:rotateY(45deg); }
+      50% { -webkit-transform: rotateY(90deg); transform:rotateY(90deg); }
       100% { -webkit-transform: rotateY(0deg); transform:rotateY(0deg); }
 }
 @keyframes tip {
-      50% { transform: rotateY(45deg); transform:rotateY(45deg); }
+      50% { transform: rotateY(90deg); transform:rotateY(90deg); }
       100% { transform: rotateY(0deg); transform:rotateY(0deg); }
 }
 .tileWrap:hover .tile {
