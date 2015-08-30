@@ -1,0 +1,29 @@
+
+{{> header }}
+
+      <table id="top">
+
+            <thead>
+                  <td>
+                        {{> titles }}
+                  </td>
+            </thead>
+
+            <tbody>
+                  <td>
+                        <form class="contactForm">
+                              <h3 class="greenText">{{formMsg}}</h3>
+
+                              <input type="text" name="firstname" placeholder="First Name" autofocus>
+                              <input type="text" name="lastname" placeholder="Last Name">
+                              <input type="tel" name="phone" placeholder="Phone #" required>
+                              <input type="email" name="email" placeholder="Email" required>
+                              <textarea type="text" name="message" placeholder="Message"></textarea>
+                              <button type="submit" formenctype="application/x-www-form-urlencoded" formaction="/confirmation" formmethod="post">SEND</button>
+                        </form>
+                  </td>
+            </tbody>
+
+      </table>
+
+{{> footer}}

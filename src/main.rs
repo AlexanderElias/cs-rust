@@ -24,49 +24,53 @@ fn main() {
         data.insert("sub-title", "Web Development");
         data.insert("hint", "<div id=\"hint\"><span id=\"message\">Use Arrow Keys</span><div>&#x276f;</div></div>");
 
-        // res.set(MediaType::Html);
-
-        return res.render("views/index.html", &data);
+        return res.render("views/index.hbs", &data);
     });
 
+
     server.get("/contact", middleware! { |req, mut res|
+
         let mut data = HashMap::new();
         data.insert("tab-title","Contact Us | Web Development, Design, and SEO Company In Tucson");
         data.insert("title","Contact");
 
-        let mut s = String::new();
-        req.origin.read_to_string(&mut s);
+        // let mut s = String::new();
+        // req.origin.read_to_string(&mut s);
 
-        return res.render("views/contact.html", &data)
+        return res.render("views/contact.hbs", &data)
     });
 
-    server.post("/submit", middleware!{ |req, res|
-        let mut s = String::new();
-        req.origin.read_to_string(&mut s);
-        println!("First Name: {}", s);
 
-        let the = s.to_string();
+    server.post("/confirmation", middleware!{ |req, res|
 
-        let mut data = HashMap::new();
-        data.insert("tab-title","Submit | Verge Web Development, Design, and SEO Company In Tucson");
-        data.insert("title","Submit");
-        data.insert("confirmation", &the);
-        return res.render("views/submit.html", &data)
+        let mut form_data = String::new();
+        req.origin.read_to_string(&mut form_data);
+
+        println!("{}", form_data);
+
+        // let mut data = HashMap::new();
+        // data.insert("tab-title","Submit | Verge Web Development, Design, and SEO Company In Tucson");
+        // data.insert("title","Submit");
+        // data.insert("confirmation", &the);
+        // return res.render("views/confirmation.hbs", &data)
     });
+
 
     server.get("/about", middleware!{ |req, res|
+
         let mut data = HashMap::new();
         data.insert("tab-title","About");
         data.insert("title","About");
 
-        return res.render("views/about.html", &data);
+        return res.render("views/about.hbs", &data);
     });
 
+
     //Serve A Static Directory
-    server.utilize(StaticFilesHandler::new("views/public/"));
+    server.utilize(StaticFilesHandler::new("public/"));
     //server.utilize(FaviconHandler::new("/images/file"));
 
 
 
-    server.listen("0.0.0.0:8080");
+    server.listen("0.0.0.0:3000");
 }
